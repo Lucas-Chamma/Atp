@@ -158,7 +158,10 @@ if (!isset($_SESSION)) {
                                                     <input type="date" class="form-control" name="itemDevEm" value="<?= $dado['devolvido'] ?>">
                                                 </div>
 
-
+                                                <div class="mb-3 ">
+                                                    <label for="observacao" class="form-label text-dark">Descrição</label>
+                                                    <textarea type="text" rows="3" class="form-control" name="descricaoEdit"><?= $dado['descricao'] ?></textarea>
+                                                </div>
 
 
                                                 <div class="row">
@@ -306,6 +309,10 @@ if (!isset($_SESSION)) {
                             <input type="date" class="form-control" name="devolvido">
                         </div>
 
+                        <div class="mb-3 ">
+                                <label for="observacao" class="form-label">Descrição</label>
+                                <textarea rows="3" class="form-control" name="descricao" ></textarea>
+                        </div>
 
                         <div class="row">
                             <div class="col d-grid">

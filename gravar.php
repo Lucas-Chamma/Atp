@@ -41,10 +41,11 @@
             $dataItemDev = $_POST["dataItemDev"];
             $idUser = $_SESSION['id'];
             $devolvido = $_POST["devolvido"];
+            $descricao = $_POST["descricao"];
 
           
             
-            $mysqli->query("INSERT INTO `itens` (item, dataItem,contato,devolucao,idUser,devolvido) VALUES ('{$nomeItem}','{$dataItem}','{$contatoItem}','{$dataItemDev}','{$idUser}','{$devolvido}')");
+            $mysqli->query("INSERT INTO `itens` (item, dataItem,contato,devolucao,idUser,devolvido,descricao) VALUES ('{$nomeItem}','{$dataItem}','{$contatoItem}','{$dataItemDev}','{$idUser}','{$devolvido}','{$descricao}')");
             
             if($mysqli == true){
                 print "<script>alert('Cadastro de Item realizado');</script>";
@@ -85,10 +86,12 @@
             $dataItemDevEdit = $_POST["dataItemDevEdit"];
             $idItemEdit = $_POST["idItemEdit"];
             $itemDevEm = $_POST["itemDevEm"];
+            $descricaoEdit = $_POST["descricaoEdit"];
+
 
            
 
-            $mysqli->query("UPDATE `itens` SET item='{$nomeItemEdit}',dataItem='{$dataItemEdit}',contato='{$contatoItemEdit}',devolucao='{$dataItemDevEdit}',devolvido='{$itemDevEm}' WHERE id ='{$idItemEdit}'");
+            $mysqli->query("UPDATE `itens` SET item='{$nomeItemEdit}',dataItem='{$dataItemEdit}',contato='{$contatoItemEdit}',devolucao='{$dataItemDevEdit}',devolvido='{$itemDevEm}',descricao='{$descricaoEdit}'  WHERE id ='{$idItemEdit}'");
             
             if($mysqli == true){
                 print "<script>alert('Item atualizado com Sucesso');</script>";
